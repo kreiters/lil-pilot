@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    min-height: 100vh;
+    background: url("instruments.jpg") 50%/cover;
+    overflow: hidden;
+  }
+
+  #btns {
+    text-align: center;
+    margin: auto;
+  }
+  button {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    overflow: hidden;
+    position: relative;
+    height:100px;
+    width: 100px;
+    cursor: pointer;
+    background: #13481e;
+    border: 10px solid rgb(65, 65, 65);
+    border: box-sizing;
+    border-radius: 5px;
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  
+  /*button:focus, button:hover {
+    outline: none;
+    -webkit-filter: none;
+            filter: none;
+    background: #40f364;
+  }*/
+  
+  button.clicked {
+    background: #40f364;
+  }
+  
+  #btn4 {
+    background: rgb(129, 128, 36);
+  }
+  #btn4.clicked {
+    background: yellow;
+  }
+
+  #btn5 {
+    background: rgb(92, 17, 17);
+  }
+  #btn5.clicked {
+    background: red;
+  }
+
+  #inst1.clicked {
+    position: absolute;
+    top: -145px;
+    left: 50px;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset -50px -50px 100px 50px rgba(170, 170, 170, 0.466);
+  }
+
+  #inst2.clicked {
+    position: absolute;
+    top: -175px;
+    left: 535px;
+    width: 400px;
+    height: 380px;
+    border-radius: 5%;
+    border: 30px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset -50px -50px 100px 50px rgba(170, 170, 170, 0.466);
+  }
+
+  #inst3.clicked {
+    position: absolute;
+    top: -145px;
+    right: 50px;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset -50px -50px 100px 50px rgba(170, 170, 170, 0.466);
+  }
+
+  #inst4.clicked {
+    position: absolute;
+    top: 330px;
+    left: 70px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset -50px -50px 100px 50px rgba(170, 170, 170, 0.466);
+  }
+
+  #inst5.clicked {
+    position: absolute;
+    top: 420px;
+    left: 585px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset -50px -50px 100px 50px rgba(170, 170, 170, 0.466);
+  }
+
+  #inst6.clicked {
+    position: absolute;
+    top: 315px;
+    right: 50px;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset -50px -50px 100px 50px rgba(170, 170, 170, 0.466);
+  }
+
+  #redLight{
+    position: absolute;
+    top:38px;
+    left: 490px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(88, 15, 30, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #redLight.flash{
+    position: absolute;
+    top:38px;
+    left: 490px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(252, 3, 53);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #redLight.off{
+    position: absolute;
+    top:38px;
+    left: 490px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(88, 15, 30, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #greenLight{
+    position: absolute;
+    top:38px;
+    right: 495px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(27, 88, 15, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #greenLight.flash{
+    position: absolute;
+    top:38px;
+    right: 495px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(43, 248, 2, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #greenLight.off{
+    position: absolute;
+    top:38px;
+    right: 495px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(27, 88, 15, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight1{
+    position: absolute;
+    top: 245px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(32, 32, 32, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight1.flash{
+    position: absolute;
+    top: 245px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(253, 253, 253, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight1.off{
+    position: absolute;
+    top: 245px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight2{
+    position: absolute;
+    top: 245px;
+    left: 425px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(32, 32, 32, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight2.flash{
+    position: absolute;
+    top: 245px;
+    left: 425px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(253, 253, 253, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight2.off{
+    position: absolute;
+    top: 245px;
+    left: 425px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight3{
+    position: absolute;
+    top: 245px;
+    right: 425px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(32, 32, 32, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight3.flash{
+    position: absolute;
+    top: 245px;
+    right: 425px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(253, 253, 253, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight3.off{
+    position: absolute;
+    top: 245px;
+    right: 425px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight4{
+    position: absolute;
+    top: 245px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(32, 32, 32, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight4.flash{
+    position: absolute;
+    top: 245px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(253, 253, 253, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
+
+  #whiteLight4.off{
+    position: absolute;
+    top: 245px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.884);
+    border: 5px solid rgb(110, 110, 110);
+    box-shadow: 10px 10px 8px #151515;
+  }
